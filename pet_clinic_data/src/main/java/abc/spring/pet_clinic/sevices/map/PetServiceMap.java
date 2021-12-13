@@ -3,11 +3,14 @@ package abc.spring.pet_clinic.sevices.map;
 import abc.spring.pet_clinic.model.Pet;
 import abc.spring.pet_clinic.model.Vet;
 import abc.spring.pet_clinic.sevices.CrudService;
+import abc.spring.pet_clinic.sevices.PetService;
 import abc.spring.pet_clinic.sevices.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+@Service
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findAll() {
