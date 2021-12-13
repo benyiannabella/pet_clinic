@@ -1,7 +1,10 @@
 package abc.spring.pet_clinic.sevices.map;
 
 import abc.spring.pet_clinic.model.Pet;
+import abc.spring.pet_clinic.model.Vet;
 import abc.spring.pet_clinic.sevices.CrudService;
+import abc.spring.pet_clinic.sevices.VetService;
+
 import java.util.Set;
 
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
@@ -30,4 +33,6 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements Crud
     public Pet findById(Long id) {
         return super.findById(id);
     }
+
+
 }
