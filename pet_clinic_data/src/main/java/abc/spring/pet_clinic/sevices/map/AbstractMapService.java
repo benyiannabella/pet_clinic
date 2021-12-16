@@ -1,8 +1,6 @@
 package abc.spring.pet_clinic.sevices.map;
 
 import abc.spring.pet_clinic.model.BaseEntity;
-
-import javax.persistence.Id;
 import java.util.*;
 
 public class AbstractMapService<T extends BaseEntity,ID extends Long> {
