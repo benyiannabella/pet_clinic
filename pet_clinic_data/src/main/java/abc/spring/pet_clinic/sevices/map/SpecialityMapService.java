@@ -3,11 +3,13 @@ package abc.spring.pet_clinic.sevices.map;
 import abc.spring.pet_clinic.model.Speciality;
 import abc.spring.pet_clinic.sevices.CrudService;
 import abc.spring.pet_clinic.sevices.SpecialityService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class SpecialityMapService extends AbstractMapService<Speciality,Long> implements SpecialityService {
 
     @Override
