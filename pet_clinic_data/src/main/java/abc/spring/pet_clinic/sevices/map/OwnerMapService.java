@@ -2,7 +2,6 @@ package abc.spring.pet_clinic.sevices.map;
 
 import abc.spring.pet_clinic.model.Owner;
 import abc.spring.pet_clinic.model.Pet;
-import abc.spring.pet_clinic.sevices.CrudService;
 import abc.spring.pet_clinic.sevices.OwnerService;
 import abc.spring.pet_clinic.sevices.PetService;
 import abc.spring.pet_clinic.sevices.PetTypeService;
@@ -11,12 +10,12 @@ import org.springframework.stereotype.Service;
 import java.util.Set;
 
 @Service
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
     private final PetService petService;
 
-    public OwnerServiceMap(PetTypeService petTypeService, PetService petService) {
+    public OwnerMapService(PetTypeService petTypeService, PetService petService) {
         this.petTypeService = petTypeService;
         this.petService = petService;
     }

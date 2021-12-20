@@ -2,7 +2,6 @@ package abc.spring.pet_clinic.sevices.map;
 
 import abc.spring.pet_clinic.model.Speciality;
 import abc.spring.pet_clinic.model.Vet;
-import abc.spring.pet_clinic.sevices.CrudService;
 import abc.spring.pet_clinic.sevices.SpecialityService;
 import abc.spring.pet_clinic.sevices.VetService;
 import org.springframework.stereotype.Service;
@@ -10,11 +9,11 @@ import org.springframework.stereotype.Service;
 import java.util.Set;
 
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
     private  final SpecialityService specialityService;
 
-    public VetServiceMap(SpecialityService specialityService) {
+    public VetMapService(SpecialityService specialityService) {
         this.specialityService = specialityService;
     }
 
